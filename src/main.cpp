@@ -494,7 +494,7 @@ mpq CTransaction::GetMinFee(unsigned int nBlockSize, bool fAllowFree,
         if (nBlockSize == 1)
         {
             // Transactions under 10K are free
-            // (about 4500 BTC if made of 50 BTC inputs)
+            // (about 4500 CAL if made of 50 CAL inputs)
             if (nBytes < 10000)
                 nMinFee = 0;
         }

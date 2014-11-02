@@ -796,7 +796,7 @@ Cím: %4
     <message>
         <location line="+6"/>
         <source>Optional transaction fee per kB that helps make sure your transactions are processed quickly. Most transactions are 1 kB. Fee 0.01 recommended.</source>
-        <translation>Opcionális, kB-onkénti tranzakciós díj a tranzakcióid minél gyorsabb feldolgozásának elősegítésére.  A legtöbb tranzakció 1 kB-os.  0,01 BTC ajánlott.</translation>
+        <translation>Opcionális, kB-onkénti tranzakciós díj a tranzakcióid minél gyorsabb feldolgozásának elősegítésére.  A legtöbb tranzakció 1 kB-os.  0,01 CAL ajánlott.</translation>
     </message>
     <message>
         <location line="+15"/>
