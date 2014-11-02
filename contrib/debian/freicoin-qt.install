@@ -1,0 +1,5 @@
+calcoin-qt usr/bin
+share/pixmaps/calcoin32.xpm usr/share/pixmaps
+share/pixmaps/calcoin80.xpm usr/share/pixmaps
+debian/calcoin-qt.desktop usr/share/applications
+debian/calcoin-qt.protocol usr/share/kde4/services/

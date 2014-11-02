@@ -1,0 +1,43 @@
+---
+name: "release"
+suites:
+- "lucid"
+architectures:
+- "i386"
+packages:
+- "nsis"
+- "faketime"
+- "zip"
+reference_datetime: "2012-07-01 00:00:00"
+remotes: []
+files:
+- "Calcoin-Qt-i686-static-mingw32-0.0.2-2-gitian.zip"
+- "calcoind-i686-static-mingw32-0.0.2-2-gitian.zip"
+- "src-local.tar.xz"
+script: |
+  export ARCH=windows
+  export XCHAIN=$HOME/x-tools/target/$TARGET
+  export PREFIX=$HOME/sysroot
+  export BUILD=$HOME/build
+  
+  export GITIANDIR=`pwd`
+  
+  CALCOIN_VER=0.0.2-2
+  
+  export LD_PRELOAD=/usr/lib/faketime/libfaketime.so.1
+  export TZ=UTC
+  export FAKETIME=$REFERENCE_DATETIME
+  
+  mkdir -p "$PREFIX"/src
+  pushd "$PREFIX"/src
+
+  tar -xf "$GITIANDIR"/src-local.tar.xz
+  unzip "$GITIANDIR"/calcoind-i686-static-mingw32-${CALCOIN_VER}-gitian.zip bin/calcoind.exe
+  unzip "$GITIANDIR"/Calcoin-Qt-i686-static-mingw32-${CALCOIN_VER}-gitian.zip bin/Calcoin-Qt.exe
+  mkdir -p release
+  mv bin/Calcoin-Qt.exe release/
+  mv bin/calcoind.exe src/
+  cd src
+  makensis ../share/setup.nsi
+  mv ../share/calcoin-${CALCOIN_VER}-windows-setup.exe $OUTDIR/
+  popd

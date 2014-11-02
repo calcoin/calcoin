@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Calcoin
+Comment=Calcoin P2P Cryptocurrency
+Comment[fr]=Calcoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Calcoin, eşten eşe kriptografik sanal para birimi
+Exec=/usr/bin/calcoin-qt
+Terminal=false
+Type=Application
+Icon=/usr/share/pixmaps/calcoin80.xpm
+MimeType=x-scheme-handler/calcoin;
+Categories=Office;

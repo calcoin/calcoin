@@ -1,0 +1,2 @@
+debian/bin/calcoind usr/bin
+src/calcoind usr/lib/calcoin
